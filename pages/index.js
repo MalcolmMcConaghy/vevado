@@ -1,6 +1,10 @@
+import Home from './home';
+
+import './application.scss';
+
 const Index = () => (
   <div>
-    <p>Hello Next.js</p>
+    <Home />
   </div>
 );
 
