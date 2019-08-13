@@ -93,6 +93,103 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/card/card.js":
+/*!*********************************!*\
+  !*** ./components/card/card.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _card_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card.scss */ "./components/card/card.scss");
+/* harmony import */ var _card_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_card_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+function Card({
+  title,
+  image
+}) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card",
+    style: {
+      backgroundImage: `linear-gradient(to top, #000 1%, transparent), url(${image})`
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card__title"
+  }, title));
+}
+
+Card.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
+/***/ "./components/card/card.scss":
+/*!***********************************!*\
+  !*** ./components/card/card.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./components/destination_list/destination_list.js":
+/*!*********************************************************!*\
+  !*** ./components/destination_list/destination_list.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _card_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../card/card */ "./components/card/card.js");
+/* harmony import */ var _destination_list_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./destination_list.scss */ "./components/destination_list/destination_list.scss");
+/* harmony import */ var _destination_list_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_destination_list_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+function DestinationList({
+  header
+}) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "destination-list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, header), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "destination-list__destinations"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_card_card__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "COLOSSEUM",
+    image: "../../static/colosseum.jpg"
+  })));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (DestinationList);
+
+/***/ }),
+
+/***/ "./components/destination_list/destination_list.scss":
+/*!***********************************************************!*\
+  !*** ./components/destination_list/destination_list.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./components/header/header.js":
 /*!*************************************!*\
   !*** ./components/header/header.js ***!
@@ -120,9 +217,9 @@ function Header() {
     xmlns: "http://www.w3.org/2000/svg"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     fill: "#FE4A49",
-    "fill-rule": "evenodd",
-    "font-family": "Soopafresh",
-    "font-size": "40"
+    fillRule: "evenodd",
+    fontFamily: "Soopafresh",
+    fontSize: "40"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     x: "-2.52",
     y: "32"
@@ -203,11 +300,15 @@ __webpack_require__.r(__webpack_exports__);
 function Search() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "search"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "search__input-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     className: "search__input",
     type: "text",
     placeholder: "Search by attraction or destination"
-  }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "search__button"
+  }, "Search")));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Search);
@@ -249,13 +350,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header/header */ "./components/header/header.js");
 /* harmony import */ var _components_hero_hero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/hero/hero */ "./components/hero/hero.js");
+/* harmony import */ var _components_destination_list_destination_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/destination_list/destination_list */ "./components/destination_list/destination_list.js");
+
 
 
 
 
 class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_header_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_hero_hero__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_header_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_hero_hero__WEBPACK_IMPORTED_MODULE_2__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_destination_list_destination_list__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      header: "Popular Attractions"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_destination_list_destination_list__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      header: "Popular Destinations"
+    })));
   }
 
 }
@@ -295,8 +402,19 @@ const Index = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/malcolm.mcconaghy/Code/vevado/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /mnt/c/Projects/vevado/pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "prop-types":
+/*!*****************************!*\
+  !*** external "prop-types" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
 
 /***/ }),
 

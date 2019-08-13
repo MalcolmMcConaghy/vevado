@@ -1,6 +1,7 @@
 .hero {
   background-image: url('/static/colloseum.jpg');
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 300px;
   position: relative;
   width: 100%;

@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <svg width="148" height="34" xmlns="http://www.w3.org/2000/svg"><text fill="#FE4A49" fill-rule="evenodd" font-family="Soopafresh" font-size="40"><tspan x="-2.52" y="32">Vevado</tspan></text></svg>
+        <svg width="148" height="34" xmlns="http://www.w3.org/2000/svg"><text fill="#FE4A49" fillRule="evenodd" fontFamily="Soopafresh" fontSize="40"><tspan x="-2.52" y="32">Vevado</tspan></text></svg>
       </div>
     </header>
   );

@@ -1,0 +1,15 @@
+.card {
+  align-items: center;
+  background-size: 100% 100%;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em 0 rgba(0,0,0,0.30);
+  display: flex;
+  flex: 1;
+  height: 20em;
+  justify-content: center;
+
+  &__title {
+    color: #FFF;
+    font-size: 2em;
+  }
+}
