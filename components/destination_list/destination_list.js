@@ -3,17 +3,22 @@ import Card from '../card/card';
 
 import './destination_list.scss';
 
-function DestinationList({ header }) {
+function DestinationList({ header, data }) {
   return (
     <div className="destination-list">
       <h2>
         { header }
       </h2>
       <div className="destination-list__destinations">
-        <Card
-          title='COLOSSEUM'
-          image='../../static/colosseum.jpg'
-        />
+        { data.map(location => {
+          return (
+            <Card
+              key={ location.id }
+              title={ location.name }
+              image={`../../${location.image_url}.jpg`}
+            />
+          )
+        })}
       </div>
     </div>
   );

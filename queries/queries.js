@@ -9,8 +9,8 @@ const pool = new Pool({
   port: parseInt(process.env.DB_PORT),
 });
 
-const getAttraction = (req, res) => {
-  pool.query('SELECT * FROM attractions', (err, results) => {
+const getPopularLocations = (req, res) => {
+  pool.query('SELECT * FROM popular_locations', (err, results) => {
     if (err) {
       throw err
     }
@@ -20,5 +20,5 @@ const getAttraction = (req, res) => {
 }
 
 module.exports = {
-  getAttraction
+  getPopularLocations
 }

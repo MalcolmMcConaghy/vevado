@@ -4,9 +4,14 @@
   border-radius: 0.5em;
   box-shadow: 0 0 1em 0 rgba(0,0,0,0.30);
   display: flex;
-  flex: 1;
   height: 20em;
   justify-content: center;
+  margin-top: 1em;
+
+  @media (min-width: 1024px) {
+    margin-top: 0;
+    width: 30%;
+  }
 
   &__title {
     color: #FFF;
