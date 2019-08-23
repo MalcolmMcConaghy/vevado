@@ -15,10 +15,23 @@ const getPopularLocations = (req, res) => {
       throw err
     }
 
-    res.status(200).json(results.rows)
+    res.status(200).json(results.rows);
+  })
+}
+
+const getSearchResults = (req, res) => {
+  const attraction = req.params.attraction;
+
+  pool.query(`SELECT * FROM attractions WHERE attraction = '${attraction}'`, (err, results) => {
+    if (err) {
+      throw err
+    }
+
+    res.status(200).json(results.rows);
   })
 }
 
 module.exports = {
-  getPopularLocations
+  getPopularLocations,
+  getSearchResults
 }

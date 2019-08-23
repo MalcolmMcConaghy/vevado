@@ -10,6 +10,7 @@ app.prepare().then(() => {
   const server = express();
 
   server.get('/api/popular_locations', db.getPopularLocations);
+  server.get('/api/search/:attraction', db.getSearchResults);
 
   server.get('*', (req, res) => {
     return handle(req, res);
