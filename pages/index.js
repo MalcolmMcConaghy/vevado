@@ -15,9 +15,7 @@ class Index extends Component {
   render() {
     return (
       <Fragment>
-        <header>
-          <Hero />
-        </header>
+        <Hero />
         <main>
           {/* <DestinationList
             header="Popular Attractions"

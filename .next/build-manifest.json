@@ -12,6 +12,8 @@
     ],
     "/_app": [
       "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
     "/_error": [
@@ -24,8 +26,10 @@
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
-    "/search/[attraction]": [
+    "/search/[results]": [
       "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
       "static/runtime/main.js"
     ]
   }
